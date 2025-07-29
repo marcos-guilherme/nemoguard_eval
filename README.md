@@ -13,7 +13,7 @@ Este repositório contém o artefato para o artigo **"Avaliação do NeMo Guardr
 
 
 -   `main.py`: O script principal (orquestrador) que executa todo o pipeline de ponta a ponta.
--   `analise_resultados.ipynb`: **(A ser anexado)** Um Notebook no Collab para carregar o dataset final e reproduzir as métricas e tabelas do artigo.
+-   `analise_resultados.ipynb`: **(A ser anexado)** Um Notebook no Collab para carregar o dataset final e reproduzir os do artigo.
 -   `requirements.txt`: Lista de todas as dependências Python necessárias.
 -   `.env`: Arquivo local (não versionado) para armazenar as chaves de API. (Você deve criá-lo localmente)
 -   `scripts/`: Diretório contendo os módulos com a lógica de negócio.
