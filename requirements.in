@@ -1,0 +1,15 @@
+# Análise de Dados e ML
+fastparquet
+huggingface-hub
+numpy
+pandas
+scikit-learn
+
+# APIs e Web
+openai
+requests
+
+# Utilitários
+loguru
+python-dotenv
+tqdm
