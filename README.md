@@ -78,7 +78,64 @@ As chaves de API são informações sensíveis. O código foi projetado para car
 
 Recomendamos fortemente o uso do **Docker** para a reprodução, pois ele garante um ambiente idêntico ao de desenvolvimento e validação.
 
-### Método 1: Execução com Docker (Recomendado)
+
+### Executando o Projeto com Docker Hub (Mais recomendado, tente este primeiro!)
+
+A imagem está disponível no **Docker Hub**.
+
+#### Pré-requisito
+
+* **Docker** instalado ([docker.com](https://www.docker.com/products/docker-desktop/))
+
+#### Passos
+
+1. **Crie a pasta de trabalho**
+
+   ```bash
+   mkdir experimento_nemoguard && cd experimento_nemoguard
+   mkdir data
+   ```
+
+2. **Crie o arquivo `.env` dentro desta pasta experimento_nemoguard** 
+
+   ```env
+   OPENAI_API_KEY="sk-..."
+   NVIDIA_API_KEY="nvapi-..."
+   ```
+
+   > Substitua pelos valores reais.
+
+3. **Baixe a imagem**
+>Para que o pull funcione, você precisa estar logado na sua conta docker, faça isso com "docker login"
+   ```bash
+   docker pull octequ/nemoguard-eval:latest
+   ```
+
+4. **Execute o contêiner**
+
+   * **Teste rápido:**
+
+     ```bash
+     docker run --rm --env-file .env -v ./data:/app/data octequ/nemoguard-eval:latest --test
+     ```
+   * **Execução completa:**
+
+     ```bash
+     docker run --rm --env-file .env -v ./data:/app/data octequ/nemoguard-eval:latest
+     ```
+
+#### Notas
+
+* `--rm`: remove o contêiner após rodar
+* `--env-file .env`: carrega suas chaves de API
+* `-v ./data:/app/data`: salva resultados em `./data`
+
+Após a execução, os **.csv** estarão na pasta `data`.
+
+---
+
+
+### Método 2: Construindo a Imagem Docker
 
 Esta abordagem é a mais simples e confiável para reproduzir os resultados.
 
@@ -122,7 +179,7 @@ docker run --rm \
   - **Tempo Esperado:** Várias horas, dependendo da latência da API e dos limites de taxa.
   - **Resultado Esperado:** O arquivo `data/evaluations_final_default.csv` será criado (ou completado), contendo o dataset final da avaliação.
 
-### Método 2: Execução Local
+### Método 3: Execução Local
 
 Se preferir não usar Docker, siga os passos abaixo.
 
