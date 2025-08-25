@@ -184,10 +184,8 @@ Se preferir não usar Docker, siga os passos abaixo.
 
 **1. Prepare o Ambiente:**
 Clone o repositório, crie um ambiente virtual, instale as dependências e crie seu arquivo `.env` com as chaves de API.
-
+> Depois de clonado:
 ```bash
-git clone <URL_DO_REPOSITORIO>
-cd <NOME_DO_REPOSITORIO>
 python -m venv venv
 source venv/bin/activate  # No Windows: venv\Scripts\activate
 pip install -r requirements.txt
