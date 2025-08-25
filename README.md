@@ -150,6 +150,7 @@ docker build -t nemoguard-eval .
 **2. Execute o Teste Mínimo (Verificação):**
 
 Este teste rápido valida seu ambiente e suas chaves de API em uma pequena amostra.
+> Note que a flag -e serve para definir as variáveis de ambiente (chaves API), use elas caso você não tenha criado o ´.env´
 
 ```bash
 docker run --rm \
