@@ -1,5 +1,3 @@
-### ATENÇÃO: Neste Drive estão as chaves API compactadas de um txt, a senha para descompactar é o ID da submissão do trabalho no JEMS. [Drive](https://drive.google.com/drive/folders/1C9VJgs_AeWI05Ya95vqTlrHdtW2lPtnz?usp=sharing)
-
 # Avaliação do NeMo Guardrails como um Firewall para a Interação Usuário-LLM
 
 ## Resumo
@@ -243,4 +241,4 @@ Com o dataset final gerado (`evaluations_final_default.csv`), a análise para re
 
 ## License
 
-Este projeto está licenciado sob a [Licença MIT](https://www.google.com/search?q=LICENSE).
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
